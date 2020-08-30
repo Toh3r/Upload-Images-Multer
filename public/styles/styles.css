@@ -1,0 +1,52 @@
+html,
+body {
+  background-color: rgb(25,25,25);
+  color: whitesmoke;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Play", sans-serif;
+  overflow-x: hidden;
+}
+
+.form-container {
+    min-height: 25vh;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid blue;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.images-container{
+    border: 2px solid blue;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.images-header {
+    display: block;
+    text-align: center;
+}
+
+.images-section{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.uploaded-image {
+    max-width: 400px;
+    margin: 20px;
+}
+
+.errting {
+    margin: 20px;
+}
+
+.image-details {
+    text-align: center;
+}

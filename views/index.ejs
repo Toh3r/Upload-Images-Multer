@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploading</title>
+    <!-- Styling -->
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Play:400,700&display=swap&subset=cyrillic,cyrillic-ext,greek,latin-ext,vietnamese"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Upload Form -->
+    <div class="form-container">
+        <div>
+            <h1>Upload an Image</h1>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <div>
+                    <label for="name">Image Title</label>
+                    <input type="text" id="name" placeholder="Name" value="" name="name" required>
+                </div>
+                <br>
+                <div>
+                    <label for="desc">Image Description</label>
+                    <input type="text" id="desc" placeholder="Description" value="" name="desc" required>
+                    </textarea>
+                </div>
+                <br>
+                <div>
+                    <label for="image">Upload Image</label>
+                    <input type="file" id="image" name="image" value="" required>
+                </div>
+                <br>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <!-- Display Uploaded Images -->
+    <div class="images-container">
+        <h1 class="images-header">Uplaoded Images</h1>
+        <div class="images-section">
+            <% items.forEach(function(image) { %>
+            <div class="errting">
+                <img class="uploaded-image" src="data:image/<%=image.img.contentType%>;base64, 
+                     <%=image.img.data.toString('base64')%>">
+                <div class="image-details">
+                    <h5>Name: <%= image.name %></h5>
+                    <p>Description: <%= image.desc %></p>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+
+</html>
