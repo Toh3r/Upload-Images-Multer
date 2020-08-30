@@ -15,4 +15,4 @@ Run 'npm run dev' (Uses nodemon) or 'npm run start'
 
 #### Screen Shot
 
-![Image of Site](./public/images/MulterScreenshot.JPG)
+![Image of Site](./public/images/MulterScreenshot.jpg)
